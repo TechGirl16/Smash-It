@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 3
+  tags:
+  - Goal
+  - Wall
+  - Paddle2
+  - Paddle
+  - Goalp2
+  - AI player
+  - Ball
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 3111855049
+    locked: 0
+  - name: PlayArea
+    uniqueID: 2768813899
+    locked: 0
+  - name: GamePlay
+    uniqueID: 2854781627
+    locked: 0
+  m_RenderingLayers:
+  - Default
