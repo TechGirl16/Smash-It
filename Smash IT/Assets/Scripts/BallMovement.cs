@@ -10,8 +10,8 @@ public class BallMovement : MonoBehaviour
 
     void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
-        col = GetComponent<Collider2D>();
+        rb = GetComponent<Rigidbody2D>(); // gets the rigidbody component
+        col = GetComponent<Collider2D>(); // gets the rigidbody component
 
         rb.bodyType = RigidbodyType2D.Kinematic; // ball won't move until serve
         col.isTrigger = true; // paddle passes through for first serve
@@ -44,7 +44,7 @@ public class BallMovement : MonoBehaviour
 
         if (other.CompareTag("Paddle") || other.CompareTag("Paddle2"))
         {
-            LaunchFromPaddle(other.transform); // now uses the public method
+            LaunchFromPaddle(other.transform); 
         }
     }
 
@@ -52,13 +52,20 @@ public class BallMovement : MonoBehaviour
     {
         if (collision.collider.CompareTag("Goal"))
         {
-            GameManager.Instance.PlayerScores(2); // Player 2 scores
+            if (GameManager.Instance != null)
+                GameManager.Instance.PlayerScores(2);
         }
         else if (collision.collider.CompareTag("Goalp2"))
         {
-            GameManager.Instance.PlayerScores(1); // Player 1 scores
+            if (GameManager.Instance != null)
+                GameManager.Instance.PlayerScores(1);
+        }
+        else
+        {
+            // Ignore other collisions
         }
     }
+
 }
 
 

@@ -11,6 +11,9 @@ TagManager:
   - Goalp2
   - AI player
   - Ball
+  - Power up
+  - SpawnArea
+  - SpawnArea2
   layers:
   - Default
   - TransparentFX
