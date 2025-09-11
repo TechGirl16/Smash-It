@@ -679,23 +679,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 398453272}
   m_CullTransparentMesh: 1
---- !u!1 &586488664 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8200943440218386260, guid: e6a3c9cb3c95e0840baca13c60b9c378, type: 3}
-  m_PrefabInstance: {fileID: 1098901709}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &586488670
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 586488664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d8bd4a7c27a7a44a78f5d1f2db715a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &741423273
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,29 +1142,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 977713940779215786, guid: e6a3c9cb3c95e0840baca13c60b9c378, type: 3}
-      propertyPath: m_BodyType
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 977713940779215786, guid: e6a3c9cb3c95e0840baca13c60b9c378, type: 3}
-      propertyPath: m_UseFullKinematicContacts
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8200943440218386260, guid: e6a3c9cb3c95e0840baca13c60b9c378, type: 3}
       propertyPath: m_Name
       value: Player 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8200943440218386260, guid: e6a3c9cb3c95e0840baca13c60b9c378, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8200943440218386260, guid: e6a3c9cb3c95e0840baca13c60b9c378, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 586488670}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6a3c9cb3c95e0840baca13c60b9c378, type: 3}
 --- !u!1 &1226898367
 GameObject:
@@ -1264,12 +1232,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd4676c2bffbe9747bfd5d699a3f400a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpPrefab: {fileID: 2480073808733035197, guid: 397611be974a64944992b787644d1de3, type: 3}
+  powerUpPrefabs:
+  - {fileID: 2480073808733035197, guid: 397611be974a64944992b787644d1de3, type: 3}
+  - {fileID: 2480073808733035197, guid: a941bfa0a71d09a42aca05844cf650f7, type: 3}
+  - {fileID: 2480073808733035197, guid: 4983fa0d4a9ad6f4ab99c5577f34bc98, type: 3}
   firstDelay: 3
   spawnInterval: 10
-  spawnAreas:
-  - {fileID: 1361879630}
-  - {fileID: 1691055916}
+  topArea: {fileID: 1361879630}
+  bottomArea: {fileID: 1691055916}
 --- !u!4 &1243966838
 Transform:
   m_ObjectHideFlags: 0
