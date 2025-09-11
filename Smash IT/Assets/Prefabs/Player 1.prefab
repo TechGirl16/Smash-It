@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4660240839101277947}
   - component: {fileID: -4637281528938561193}
   - component: {fileID: 977713940779215786}
+  - component: {fileID: 8578448791355357868}
   m_Layer: 0
   m_Name: Player 1
   m_TagString: Paddle
@@ -124,7 +125,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.057256937, y: 0.39702725}
+  m_Offset: {x: 0.057256937, y: -0.14454031}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -134,7 +135,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 5.8750386, y: 7.3314576}
+  m_Size: {x: 5.8750386, y: 6.2483225}
   m_EdgeRadius: 0
 --- !u!114 &-4637281528938561193
 MonoBehaviour:
@@ -149,7 +150,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 15
-  Ball: {fileID: 0}
 --- !u!50 &977713940779215786
 Rigidbody2D:
   serializedVersion: 5
@@ -160,7 +160,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 8200943440218386260}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -177,3 +177,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8578448791355357868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8200943440218386260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15e4416189732549a6ae6d13040f363, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
