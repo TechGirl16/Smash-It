@@ -82,7 +82,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -425,7 +425,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
@@ -434,7 +434,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Big Ball Powerup_0: -9130912608670895942
+      Big Ball Powerup_1: 6558164937816795582
+      Big Ball Powerup_10: -8007852621723292339
+      Big Ball Powerup_11: -8520213751982273649
+      Big Ball Powerup_12: -3767910945732137430
+      Big Ball Powerup_2: 6406865997425761121
+      Big Ball Powerup_3: 2542446212800887661
+      Big Ball Powerup_4: 3741796255589446420
+      Big Ball Powerup_5: 3570151308476924445
+      Big Ball Powerup_6: -7238544794341668448
+      Big Ball Powerup_7: -2291289120915186777
+      Big Ball Powerup_8: -3928067127519662676
+      Big Ball Powerup_9: -7107345226486291930
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
