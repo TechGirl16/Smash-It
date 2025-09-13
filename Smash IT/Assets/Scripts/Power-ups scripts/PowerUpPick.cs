@@ -7,7 +7,7 @@ public class PowerUpPickup : MonoBehaviour
         BigPaddle,
         SpeedBoost,
         SlowBall,
-        MyTeammatesPowerUp //  Added slot for Faith
+        BigBall,
     }
 
     public PowerUpType type;
@@ -35,9 +35,9 @@ public class PowerUpPickup : MonoBehaviour
             case PowerUpType.SlowBall:
                 effects.ApplySlowBall(factor, duration);
                 break;
-                // for Faith's power up 
-            case PowerUpType.MyTeammatesPowerUp:
-                effects.ApplyMyTeammatesPowerUp(factor, duration); 
+                // for big ball power up 
+            case PowerUpType.BigBall:
+                effects.ApplyBigBall(factor, duration); 
                 break;
         }
 

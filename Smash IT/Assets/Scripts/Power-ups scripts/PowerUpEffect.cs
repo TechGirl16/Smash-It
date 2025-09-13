@@ -7,6 +7,8 @@ public class PowerUpEffect : MonoBehaviour
     private Color originalColor;
     private Vector3 originalScale;
     private Coroutine activeRoutine;
+    public bool isDoublePointsActive = false;
+
 
     private void Awake()
     {
@@ -39,6 +41,7 @@ public class PowerUpEffect : MonoBehaviour
         transform.localScale = targetScale;
 
         sr.color = Color.yellow;
+        isDoublePointsActive = true; // double point
 
         yield return new WaitForSeconds(duration - 1f);
 
@@ -54,7 +57,7 @@ public class PowerUpEffect : MonoBehaviour
         // Reset
         transform.localScale = originalScale;
         sr.color = originalColor;
-
+        isDoublePointsActive = false; // stops double point
         activeRoutine = null;
     }
 
@@ -75,6 +78,7 @@ public class PowerUpEffect : MonoBehaviour
         float originalSpeed = move.moveSpeed;
         move.moveSpeed *= factor;
         sr.color = Color.red;
+        isDoublePointsActive = true; // double point
 
         yield return new WaitForSeconds(duration - 1f);
 
@@ -88,6 +92,7 @@ public class PowerUpEffect : MonoBehaviour
 
         move.moveSpeed = originalSpeed;
         sr.color = originalColor;
+        isDoublePointsActive = false; // stops double point
         activeRoutine = null;
     }
 
@@ -108,6 +113,7 @@ public class PowerUpEffect : MonoBehaviour
         Vector2 originalVelocity = rb.linearVelocity;
         rb.linearVelocity = originalVelocity * factor;
         sr.color = Color.cyan;
+        isDoublePointsActive = true; // double point
 
         yield return new WaitForSeconds(duration - 1f);
 
@@ -121,30 +127,34 @@ public class PowerUpEffect : MonoBehaviour
 
         rb.linearVelocity = originalVelocity;
         sr.color = originalColor;
+        isDoublePointsActive = false; // stops double point
         activeRoutine = null;
     }
 
     // ------------------------
-    // TEMPLATE: Faith POWER-UP
+    // BIG BALL
     // ------------------------
-    public void ApplyMyTeammatesPowerUp(float factor, float duration)
+    public void ApplyBigBall(float factor, float duration)
     {
         if (activeRoutine != null) StopCoroutine(activeRoutine);
-        activeRoutine = StartCoroutine(MyTeammatesPowerRoutine(factor, duration));
+        activeRoutine = StartCoroutine(BigBallRoutine(factor, duration));
     }
 
-    private IEnumerator MyTeammatesPowerRoutine(float factor, float duration)
+    private IEnumerator BigBallRoutine(float factor, float duration)
     {
-        Debug.Log("Teammate power-up activated!");
+        Debug.Log("Big Ball power-up activated!");
 
-        //  She puts her custom effect here
-        // Example: double points, reverse controls, freeze paddle, etc.
-        sr.color = Color.magenta;
+        // custom effect 
+        transform.localScale = originalScale * factor; // increase in ball size
+        isDoublePointsActive = true; // double point
+        sr.color = Color.magenta; // ball colour changes
 
         yield return new WaitForSeconds(duration);
 
-        //  Reset values if her effect needs it
-        sr.color = originalColor;
+        //  Reset effects
+        transform.localScale = originalScale; // reduce ball size
+        isDoublePointsActive = false; // stops double point
+        sr.color = originalColor; // reverse ball colour
 
         activeRoutine = null;
     }
